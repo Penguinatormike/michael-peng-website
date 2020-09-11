@@ -5,25 +5,25 @@ import {
     HashRouter
 } from "react-router-dom";
 import Home from "./Home";
-import Stuff from "./Stuff";
-import Contact from "./Contact";
+import Projects from "./Projects";
+import Samples from "./Samples";
 
 
 class Main extends Component {
     render() {
         return (
             <HashRouter>
-                <div>
+                <div className={'container'}>
                     <h1>Michael Peng</h1>
                     <ul className="header">
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/stuff">Stuff</NavLink></li>
-                        <li><NavLink to="/contact">Contact</NavLink></li>
+                        <li><NavLink exact to="/">Home</NavLink></li>
+                        <li><NavLink to="/projects">Projects</NavLink></li>
+                        <li><NavLink to="/contact">Code Samples</NavLink></li>
                     </ul>
                     <div className="content">
                         <Route exact path="/" component={Home}/>
-                        <Route path="/stuff" component={Stuff}/>
-                        <Route path="/contact" component={Contact}/>
+                        <Route path="/projects" component={Projects}/>
+                        <Route path="/samples" component={Samples}/>
                     </div>
                 </div>
             </HashRouter>

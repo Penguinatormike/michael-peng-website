@@ -5,14 +5,16 @@ class Home extends Component {
         return (
             <div>
                 <h2>HELLO WORLD</h2>
-                <p>Cras facilisis urna ornare ex volutpat, et
-                    convallis erat elementum. Ut aliquam, ipsum vitae
-                    gravida suscipit, metus dui bibendum est, eget rhoncus nibh
-                    metus nec massa. Maecenas hendrerit laoreet augue
-                    nec molestie. Cum sociis natoque penatibus et magnis
-                    dis parturient montes, nascetur ridiculus mus.</p>
+                <p>
+                    I am currently a Software Engineer at GroupHealth. I have graduated from Thompson Rivers University studying in their computer science program. If you would like to know more about me, please refer to my resume or you may contact me by email.
 
-                <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+                    <br/>
+                    <br/>
+                    Email: <a href="mailto:mail@pengmichael.com">mail@pengmichael.com</a>
+
+                    <br/>
+                    Resume: Pdf_Resume
+                </p>
             </div>
         );
     }
