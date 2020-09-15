@@ -13,7 +13,7 @@ class Home extends Component {
                     Email: <a href="mailto:mail@pengmichael.com">mail@pengmichael.com</a>
 
                     <br/>
-                    Resume: Pdf_Resume
+                    Resume: <a href={"./files/MichaelPengResumeLimitedInfo.pdf"} target={"_blank"}>MichaelPengResume</a>
                 </p>
             </div>
         );

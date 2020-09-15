@@ -61,7 +61,7 @@ ul.header li a {
 }
 
 .container {
-  width: 100%;
+  width: 70%;
 }
 
 .hidden {
@@ -69,4 +69,8 @@ ul.header li a {
 }
 .active {
   background-color: #0099FF;
+}
+
+.iframe {
+  background-color: white;
 }
