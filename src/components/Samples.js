@@ -22,13 +22,13 @@ class Samples extends Component {
                     Android Apps (deprecated):
                 </p>
                 <p>
-                    Calculator:
+                    Calculator: <a href={"https://play.google.com/store/apps/details?id=com.peng.t00055798.com.peng.t00055798.com.peng.t00055798.calculator"}>https://play.google.com/store/apps/details?id=com.peng.t00055798.com.peng.t00055798.com.peng.t00055798.calculator</a>
                 </p>
                 <p>
-                    TIC-TAC-TOE:
+                    TIC-TAC-TOE: <a href={"https://play.google.com/store/apps/details?id=com.peng.tictactoe_peng"}>https://play.google.com/store/apps/details?id=com.peng.tictactoe_peng</a>
                 </p>
                 <p>
-                    POS: System Test:
+                    POS: System Test: <a href={"https://play.google.com/store/apps/details?id=com.peng.pos"}>https://play.google.com/store/apps/details?id=com.peng.pos</a>
                 </p>
             </div>
         );
