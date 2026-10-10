@@ -1,35 +1,43 @@
-
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Traveling Salesman Problem with Genetic Algorithm</title>
     <script src='ga_tsp.js'></script>
+    <style>
+        body { margin: 0; padding: 20px; font: 14px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #1c1917; background: #fff; }
+        .controls { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px 14px; margin-bottom: 16px; }
+        label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #6b6560; font-family: ui-monospace, Consolas, monospace; }
+        input { padding: 7px 9px; font: inherit; font-size: 14px; color: #1c1917; border: 1px solid #e7e5e4; border-radius: 8px; }
+        input:focus { outline: 2px solid #2563eb; outline-offset: -1px; }
+        .buttons { display: flex; gap: 8px; margin-bottom: 16px; }
+        button { padding: 8px 16px; font: inherit; font-weight: 500; border-radius: 8px; border: 1px solid #e7e5e4; background: #fff; cursor: pointer; }
+        button#start { background: #1c1917; color: #fff; border-color: #1c1917; }
+        button:disabled { opacity: 0.4; cursor: default; }
+        canvas { max-width: 100%; border: 1px solid #e7e5e4; border-radius: 8px; }
+        #output { margin-top: 10px; font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: #6b6560; }
+    </style>
 </head>
 
 <body>
-<h1>Genetic Algorithm for Traveling Salesman Problem</h1>
-<br>
+    <div class="controls">
+        <label>NO_CITIES <input id='no-cities' value='20'></label>
+        <label>MAP_WIDTH <input id='map-width' value='400'></label>
+        <label>MAP_HEIGHT <input id='map-height' value='400'></label>
+        <label>POPULATION_SIZE <input id='population-size' value='200'></label>
+        <label>CROSSOVER_RATE <input id='crossover-rate' value='0.8'></label>
+        <label>MUTATION_RATE <input id='mutation-rate' value='0.05'></label>
+        <label>MAX_GENERATIONS <input id='max-generations' value='1000000'></label>
+    </div>
 
-    NO_CITIES: <input style='position: absolute; left:200px' id='no-cities' value='20'><br>
-    MAP_WIDTH: <input style='position: absolute; left:200px' id='map-width' value='400'><br>
-    MAP_HEIGHT: <input style='position: absolute; left:200px' id='map-height' value='400'><br>
-    POPULATION_SIZE: <input style='position: absolute; left:200px' id='population-size' value='200'><br>
-    CROSSOVER_RATE: <input style='position: absolute; left:200px' id='crossover-rate' value='0.8'><br>
-    MUTATION_RATE: <input style='position: absolute; left:200px' id='mutation-rate' value='0.05'><br>
-    MAX_GENERATIONS: <input style='position: absolute; left:200px' id='max-generations' value='1000000'><br>
-
-    <br>
+    <div class="buttons">
         <button id='start'>Start</button>
         <button id='stop' disabled>Stop</button>
+    </div>
 
-        <br>
-            <br>
-                <canvas id='tsp-canvas' width='400' height='400' style='border:1px solid black'>
-                </canvas>
-
-                <br>
-                    <div id='output'>
-                    </div>
+    <canvas id='tsp-canvas' width='400' height='400'></canvas>
+    <div id='output'></div>
 </body>
 
 <script>
