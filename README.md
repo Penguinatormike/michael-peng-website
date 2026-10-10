@@ -18,4 +18,4 @@ The travelling-salesman demo is a standalone page in `public/AI/`.
 
 ## Hosting
 
-Deployed with AWS Amplify Hosting. The build output goes to `build/`, the same folder the old Create React App build used.
+Deployed with AWS Amplify Hosting, which builds `master` on push using `amplify.yml` (Node 22, output in `build/`).
