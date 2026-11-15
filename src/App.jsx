@@ -70,7 +70,8 @@ function About() {
       </h1>
       <p className="lede">
         I studied computer science at Thompson Rivers University. Below are some projects I’ve built along
-        the way. For more, see my resume or send me an email.
+        the way, starting with a runnable version of a zero-downtime database migration I led at Hootsuite.
+        For more, see my resume or send me an email.
       </p>
       <div className="actions">
         <a className="btn btn-primary" href={`mailto:${profile.email}`}>Email me</a>
@@ -87,8 +88,12 @@ function ProjectCard({ project }) {
 
   return (
     <article className={`card${open ? ' is-open' : ''}`}>
-      <div className="card-cover">
-        <img src={project.cover} alt="" loading="lazy" />
+      <div className={`card-cover${project.coverTerminal ? ' card-cover-terminal' : ''}`}>
+        {project.coverTerminal ? (
+          <pre aria-hidden="true">{project.coverTerminal.join('\n')}</pre>
+        ) : (
+          <img src={project.cover} alt="" loading="lazy" />
+        )}
       </div>
       <div className="card-main">
         <h3>{project.title}</h3>
@@ -160,9 +165,7 @@ function Misc() {
         <h3>Android apps <span className="muted">(retired)</span></h3>
         <ul className="app-list">
           {androidApps.map((a) => (
-            <li key={a.name}>
-              <a href={a.href} target="_blank" rel="noreferrer">{a.name} ↗</a>
-            </li>
+            <li key={a.name}>{a.name}</li>
           ))}
         </ul>
       </div>

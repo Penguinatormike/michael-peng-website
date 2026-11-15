@@ -257,6 +257,24 @@ h3 {
   object-fit: cover;
 }
 
+/* Terminal-style cover for projects without a screenshot */
+.card-cover-terminal {
+  display: flex;
+  align-items: center;
+  background: #16181d;
+  padding: 16px;
+}
+
+.card-cover-terminal pre {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #c9d1d9;
+  white-space: pre;
+  overflow: hidden;
+}
+
 .card-main {
   padding: 22px 24px;
 }

@@ -14,6 +14,29 @@ export const profile = {
 
 export const projects = [
   {
+    id: 'migration',
+    title: 'Zero-downtime MongoDB → MySQL migration',
+    summary:
+      'A runnable recreation of a production migration I led at Hootsuite: feature-flagged dual writes, a resumable backfill, and a reconciler, all while the service keeps serving traffic.',
+    tags: ['Python', 'FastAPI', 'MongoDB', 'MySQL', 'Docker'],
+    coverTerminal: [
+      '$ docker compose \\',
+      '    run tools demo',
+      '',
+      'requests   19,521',
+      'errors     0',
+      'drift      0',
+      'PASS',
+    ],
+    link: { label: 'View on GitHub', href: 'https://github.com/Penguinatormike/mongo-to-mysql-migration' },
+    body: [
+      { text: 'At Hootsuite I moved a service off MongoDB and onto MySQL while it kept serving traffic, consolidating onto one database and saving roughly $60K a year. The production code can’t be shared, so this repo rebuilds the same approach at small scale around a small accounts API.' },
+      { text: 'Each step of the migration is a feature-flag flip, not a deploy: dual writes first, then a backfill that’s safe to run against live writes, then a reconciler that finds and repairs drift before reads and writes move over to MySQL.' },
+      { text: 'A load generator checks every response during the run, so “zero downtime” is measured rather than claimed. One Docker Compose command runs the whole migration end to end.' },
+      { text: 'The repo also has an AGENTS.md for coding agents, backed by a pre-commit hook and CI that block changes if any core file drops below 80% test coverage. It’s a demo, not production code; the README lists what’s simplified.' },
+    ],
+  },
+  {
     id: 'iot',
     title: 'IoT Automatic Fridge Logger',
     summary:
@@ -58,8 +81,9 @@ export const projects = [
   },
 ];
 
+// Retired: the Play Store listings are gone, so these are shown as plain names.
 export const androidApps = [
-  { name: 'Calculator', href: 'https://play.google.com/store/apps/details?id=com.peng.t00055798.com.peng.t00055798.com.peng.t00055798.calculator' },
-  { name: 'Tic-Tac-Toe', href: 'https://play.google.com/store/apps/details?id=com.peng.tictactoe_peng' },
-  { name: 'POS: System Test', href: 'https://play.google.com/store/apps/details?id=com.peng.pos' },
+  { name: 'Calculator' },
+  { name: 'Tic-Tac-Toe' },
+  { name: 'POS: System Test' },
 ];
