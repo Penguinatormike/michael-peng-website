@@ -69,9 +69,8 @@ function About() {
         I’m {profile.name}, a <span className="accent">{profile.role.toLowerCase()}</span>.
       </h1>
       <p className="lede">
-        I studied computer science at Thompson Rivers University. Below are some projects I’ve built along
-        the way, starting with a runnable version of a zero-downtime database migration I led at Hootsuite.
-        For more, see my resume or send me an email.
+        Most of my work happens inside large production systems, which makes it hard to show. So below is a
+        runnable rebuild of one of my favourite projects, plus some older ones from earlier on.
       </p>
       <div className="actions">
         <a className="btn btn-primary" href={`mailto:${profile.email}`}>Email me</a>
